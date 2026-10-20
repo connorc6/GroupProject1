@@ -1,5 +1,3 @@
-from RequestList import RequestList
-
 def check_index(index, n, allow_end):
     """Helper function. TypeError for non-int (bool included), IndexError for out of range."""
     if not isinstance(index, int) or isinstance(index, bool):
@@ -14,7 +12,7 @@ class Node:
         self.request = request
         self.next = None
 
-class LinkedRequestList(RequestList):
+class LinkedRequestList:
 
     def __init__(self):
         self.head = None

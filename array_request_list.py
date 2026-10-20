@@ -1,4 +1,3 @@
-from RequestList import RequestList
 def check_index(index, n, allow_end):
     """Helper function. TypeError for non-int (bool included), IndexError for out of range."""
     if not isinstance(index, int) or isinstance(index, bool):
@@ -7,7 +6,7 @@ def check_index(index, n, allow_end):
     if index < 0 or index > upper:
         raise IndexError(f"index {index} out of range for size {n}")
 
-class ArrayRequestList(RequestList):
+class ArrayRequestList:
 
     def __init__(self, initial_capacity=4):
         if initial_capacity < 1:
@@ -32,7 +31,8 @@ class ArrayRequestList(RequestList):
 
     def insertAt(self, index, request):
 
-        check_index(index, self.size, allow_end=True)
+        if index < 0 or index > self.size:
+            raise IndexError("index out of range")
 
 
         for i in range(self.size):
@@ -63,11 +63,13 @@ class ArrayRequestList(RequestList):
         return self.size
 
     def getAt(self, index):
-        check_index(index, self.size, allow_end=False)
+        if index < 0 or index >= self.size:
+            raise IndexError("index out of range")
         return self.data[index]
 
     def removeAt(self, index):
-        check_index(index, self.size, allow_end=False)
+        if index < 0 or index >= self.size:
+            raise IndexError("index out of range")
         removed = self.data[index]
 
 
