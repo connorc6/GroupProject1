@@ -1,8 +1,9 @@
 from maintenance_request import MaintenanceRequest
 from array_request_list import ArrayRequestList
 from linked_request_list import LinkedRequestList, Node
-from algorithms import insertion_sort_array, insertion_sort_linked, merge_sort_array, merge_sort_linked
-from workload import generate_workload, replay, run_profile
+from algorithms import (insertionSortArray, insertionSortLinked,
+                        mergeSortArray, mergeSortLinked)
+from workload import generate_workload, replay_workload
 
 # Create reproducible dataset of campus maintenance requests
 # row contains: (request_id, building, categoy, priority, reported_time, status)
@@ -56,7 +57,6 @@ print("Both structures have successfully loaded the dataset")
 
 
 
-from re import M
 # Kristena
 
 # demonstrate insertion operations
