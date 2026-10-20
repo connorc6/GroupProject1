@@ -2,7 +2,7 @@
 
 **Connor:** I, Connor Carey, certify that I have contributed to this project in a meaningful manner with work that is my own.
 
-**Shreya:**
+**Shreya:** I, Shreya Shahi, certify that I have contributed to this project in a meaningful manner with work that is my own. During this project I focused on the implementation of ArrayRequestlist class, the interface, Search(linear and binary), and Performance Experiment.  
 
 **Kristena:** I, Kristena Pederson, certify that I have contributed to this project in a meaningful manner with work that is my own. During this project, my primary focus was on the development of Part F (Dataset and Demonstration), Part H (Complexity Analysis), Part K (Workload Profiles), and the README.
 
