@@ -1,6 +1,6 @@
 **Team Contribution Statement**
 
-**Connor:** I, Connor Carey, certify that I have contributed to this project in a meaningful manner with work that is my own.
+**Connor:** I, Connor Carey, certify that I have contributed to this project in a meaningful manner with work that is my own. My primary focus was on Part C (LinkedRequestList), Part E (Sorting), Design Review, minor contributions across other parts, and compiling/cleaning up the final deliverables.
 
 **Shreya:**
 
