@@ -4,7 +4,7 @@ priority, 4 is lower. Takes nodes off the original chain and compares against
 an empty chain. Sorting happens as the new chain is scanned with each link,
 and nodes are placed based on priority.
 '''
-def insertionSortLinked(self, linked_list):
+def insertionSortLinked(linked_list):
     # compare against empty chain
     sorted_head = None
     # grab first element of ll
@@ -42,7 +42,7 @@ def insertionSortLinked(self, linked_list):
 Standard insertion sort on a dynamic array where sort precedence is set
 by priority. Priority 1 takes precedence, 4 is weakest.
 '''
-def insertionSortArray(self, array):
+def insertionSortArray(array):
     # grab buffer
     data = array.data
     for i in range(1, array.size):
@@ -74,9 +74,9 @@ link nodes back together.
 back together
 
 '''
-def mergeSortLinked(self, linked_list):
+def mergeSortLinked(linked_list):
     # sort chain, grab head of sorted list
-    linked_list.head = self.mergeSortNodes(linked_list.head)
+    linked_list.head = mergeSortNodes(linked_list.head)
     # walk through nodes to the end
     scan = linked_list.head
     while scan is not None and scan.next is not None:
@@ -86,7 +86,7 @@ def mergeSortLinked(self, linked_list):
     return linked_list
 
 # sort nodes
-def mergeSortNodes(self, head):
+def mergeSortNodes(head):
     # base case
     if head is None or head.next is None:
         return head
@@ -102,15 +102,15 @@ def mergeSortNodes(self, head):
     # break the link
     slow.next = None
     # call recursively
-    left = self.mergeSortNodes(head)
-    right = self.mergeSortNodes(second_half)
+    left = mergeSortNodes(head)
+    right = mergeSortNodes(second_half)
 
     # relink the nodes
-    return self.mergeNodes(left, right)
+    return mergeNodes(left, right)
 
 
 # relinks nodes after splitting
-def mergeNodes(self, left, right):
+def mergeNodes(left, right):
     # left empty only return right
     if left is None:
         return right
@@ -154,25 +154,25 @@ def mergeNodes(self, left, right):
 '''
 Standard merge sort with added condition of placing requests with earlier reporting time in front of others
 '''
-def mergeSortArray(self, array):
+def mergeSortArray(array):
     n = array.size
     # base case
     if n < 2:
         return array
     temp = [None] * n
-    self.mergeSortRange(array.data, temp, 0, n)
+    mergeSortRange(array.data, temp, 0, n)
     return array
 
 
-def mergeSortRange(self, data, temp, low, high):
+def mergeSortRange(data, temp, low, high):
     # base case, already sorted
     if high - low < 2:
         return
     mid = (low + high) // 2
 
     # split array recursively
-    self.mergeSortRange(data, temp, low, mid)
-    self.mergeSortRange(data, temp, mid, high)
+    mergeSortRange(data, temp, low, mid)
+    mergeSortRange(data, temp, mid, high)
 
     # i reads left half, j reads right half, k writes position in temp
     i = low
